@@ -1,0 +1,29 @@
+\textbf{Ejercicio 1.} Sea $G$ una gráfica. Demuestre que si $e \in E$, entonces 
+$\mathcal{C}_G \le \mathcal{C}_{G-e} \le \mathcal{C}_G + 1$.
+
+\textbf{Demostración:}
+
+Sin pérdida de generalidad, supongamos que $G$ es conexa ($\mathcal{C}_G = 1$). Esto es válido porque:
+
+Si $G$ tiene $k$ componentes, cualquier arista $e$ pertenece a una componente conexa. Al eliminar $e$, 
+solo se afectará dicha componente, manteniendo inalteradas las demás.
+
+Consideramos dos casos:
+
+\textbf{Caso 1:} $e$ \textbf{no es un puente}
+\begin{itemize}
+    \item Si $e$ pertenece a un ciclo, su eliminación no desconecta la gráfica
+    \item $G - e$ mantiene la conexidad: $\mathcal{C}_{G - e} = 1 = \mathcal{C}_G$
+\end{itemize}
+
+\textbf{Caso 2:} $e$ \textbf{es un puente}
+\begin{itemize}
+    \item Al eliminar $e$, la componente conexa que contenía $e$ se divide en dos
+    \item Por tanto: $\mathcal{C}_{G - e} = 2 = \mathcal{C}_G + 1$
+\end{itemize}
+
+En ambos casos, se cumple que $\mathcal{C}_G \le \mathcal{C}_{G-e} \le \mathcal{C}_G + 1$.
+
+\QED
+
+\newpage

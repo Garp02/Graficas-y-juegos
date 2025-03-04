@@ -1,0 +1,20 @@
+\textbf{Ejercicio 6.} Demuestre que si $|E|\geq |V|$, entonces G contiene un ciclo.
+
+\textbf{Demostración por contradicción:}
+
+Supongamos que G es una gráfica sin ciclos y que $|E|\geq |V|$
+
+Si G no tiene ciclos y es conexo, sabemos que el número máximo de aristas que puede tener es |V| - 1, ya que G tiene que ser un árbol, y un árbol con n vértices tiene exactamente n - 1 aristas.
+
+Si G no es conexo (tiene varios componentes conexos), cada componente conexo sigue siendo un árbol y, por lo tanto, si hay K componentes, la cantidad total de aristas en G es como máximo
+
+$|E| \leq |V| - K$
+
+Como K $\geq$ 1, esto implica que $|E| \leq |V| - 1$\textbf{!}
+
+Por hipótesis teníamos que $|E|\geq |V|$, pero acabamos de deducir que en una gráfica sin ciclos se cumple $|E| \leq |V| - 1$. Esto es una contradicción, porque $|E|$ no puede ser mayor o igual que $|V|$ y, al mismo tiempo, menor que $|V|-1$.
+
+Por lo anterior nuestra suposición inicial de que G no tiene ciclos es falsa. Por lo tanto, \textbf{$G$ debe contener al menos un ciclo}
+
+\QED
+

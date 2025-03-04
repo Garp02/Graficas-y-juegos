@@ -1,0 +1,51 @@
+\documentclass[11pt]{report}
+\setlength{\parskip}{5mm}
+\usepackage{amsmath, amssymb, babel}
+\setlength{\parindent}{5mm}
+\newcommand{\QED}{\begin{flushright}$\blacksquare$\end{flushright}}
+
+\begin{document}
+    \begin{titlepage}
+        \centering
+        {\bfseries\LARGE Universidad Autónoma de México\par}
+        \vspace{1cm}
+        {\scshape\Large Facultad de Ciencias \par}
+        \vspace{1cm}
+        {\scshape\Huge Participación de isomorfismo\par}
+        \vspace{1cm}
+        {\Large Estructuras Discretas \par}
+        {\Large 4228 \par}
+        {\Large Ibrahim Munive Ramírez \par}
+    \end{titlepage}
+    
+    \textbf{Proposición.} Sean G y H dos gráficas, demostrar que:
+    \begin{enumerate}
+        \item G es isomorfa a G.
+        \item Si G es isomorfa a H, entonces H es isomorfa a G.
+        \item Si G es isomorfa a H y H es isomorfa a I, entonces G es isomorfa a I.
+    \end{enumerate}
+    
+    \textbf{Demostración (1):}
+    
+    Sea $\psi: V_G \rightarrow V_G$ una función biyectiva tal que $\forall u, v \in V_G$ 
+    se cumple que $u$ es adyacente a $v$ si y sólo si $\psi(u)$ es adyacente a $\psi(v)$. 
+    Entonces $\psi$ es un isomorfismo de G en G.\QED
+    
+    \textbf{Demostración (2):}
+    
+    Como G es isomorga a H, entonces existe una función biyectiva $\psi: V_G \rightarrow V_H$ 
+    tal que $\forall u, v \in V_G$ se cumple que $u$ es adyacente a $v$ si y sólo si $\psi(u)$ 
+    es adyacente a $\psi(v)$. Sea $\psi^{-1}: V_H \rightarrow V_G$ la función inversa de $\psi$. 
+    Entonces $\forall u, v \in V_H$ se cumple que $u$ es adyacente a $v$ si y sólo si $\psi^{-1}(u)$ 
+    es adyacente a $\psi^{-1}(v)$. Por lo tanto, $\psi^{-1}$ es un isomorfismo de H en G.\QED
+    
+    \textbf{Demostración (3):}
+    
+    Como G es isomorfa a H y H es isomorfa a I, entonces existen funciones biyectivas $\psi :V_G\rightarrow V_H$ 
+    y $\phi: V_H \rightarrow V_I$ tales que $\forall u, v \in V_G$ se cumple que $u$ es adyacente a $v$ si y sólo si 
+    $\psi(u)$ es adyacente a $\psi(v)$ y $\forall u, v \in V_H$ se cumple que $u$ es adyacente a $v$ si y sólo si 
+    $\phi(u)$ es adyacente a $\phi(v)$. Sea $\phi \circ \psi: V_G \rightarrow V_I$ la función compuesta de $\phi$ y $\psi$. 
+    Entonces $\forall u, v \in V_G$ se cumple que $u$ es adyacente a $v$ si y sólo si $(\phi \circ \psi)(u)$ es adyacente a 
+    $(\phi \circ \psi)(v)$. Por lo tanto, $\phi \circ \psi$ es un isomorfismo de G en I.\QED
+    
+    \end{document}

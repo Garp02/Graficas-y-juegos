@@ -1,0 +1,27 @@
+\textbf{Ejercicio 1.} Sea $G$ una gráfica. Demuestre que $G$ es $k-$partita si y solo si 
+no contiene s $K_{n+1}$ ni a $\overline{P_3}$ como subgráficas inducidas. 
+
+\textbf{Demostración:}
+
+$\Rightarrow)$ Supongamos que $G$ es $k$-partita, es decir, que su conjunto 
+de vértices se puede dividir en $k$ conjuntos disjuntos $V_1, V_2, \dots, V_k,$ 
+tales que, dentro de cada conjunto, ningún par de vértices está conectado por una arista.  
+Si $G$ contuviera una subgráfica inducida isomorfa a $K_{n+1}$, existirían $n+1$ vértices 
+que están mutuamente conectados. Al distribuir $n+1$ vértices en $n$ conjuntos, es 
+inevitable que, en al menos uno de estos conjuntos, se encuentren dos vértices (puesto que $n+1 > n$). 
+Pero, dado que cada conjunto es independiente, esos dos vértices no pueden estar conectados, 
+lo que contradice la existencia de un $K_{n+1}$. Por lo tanto, $G$ no contiene una subgráfica 
+inducida isomorfa a $K_{n+1}$.
+
+$\Leftarrow)$ Supongamos que $G$ no contiene a $K_{n+1}$ ni a $\overline{P_3}$ como subgráficas inducidas. 
+
+Primero, demostremos que $G$ no contiene a $K_{n+1}$ como subgráfica inducida. Esto significa que no existen $n+1$ vértices en $G$ que estén todos mutuamente conectados. Por lo tanto, podemos dividir los vértices de $G$ en $k$ conjuntos disjuntos $V_1, V_2, \dots, V_k$ de tal manera que dentro de cada conjunto no haya aristas, ya que de lo contrario, tendríamos una subgráfica isomorfa a $K_{n+1}$.
+
+Ahora, demostremos que $G$ no contiene a $\overline{P_3}$ como subgráfica inducida. $\overline{P_3}$ es un conjunto de tres vértices donde no hay aristas entre dos de ellos y el tercero está conectado a ambos. Si $G$ contuviera una subgráfica inducida isomorfa a $\overline{P_3}$, entonces no podríamos dividir los vértices de $G$ en $k$ conjuntos disjuntos sin que al menos uno de estos conjuntos contenga una arista, lo cual contradice la definición de una gráfica $k$-partita.
+
+Por lo tanto, si $G$ no contiene a $K_{n+1}$ ni a $\overline{P_3}$ como subgráficas inducidas, podemos concluir que $G$ es $k$-partita.
+
+Por lo tanto, $G$ es $k-$partita si y solo si no contiene a $K_{n+1}$ ni a $\overline{P_3}$ como 
+subgráficas inducidas. 
+
+\QED

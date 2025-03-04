@@ -1,0 +1,19 @@
+\textbf{Ejercicio 2.} Demuestre que si $G$ es una gráfica con $|V|\geq 4$ y $|E| > \frac{n^2}{4}$ entonces $G$ contiene un ciclo impar.
+
+\textbf{Demostración por contradicción:} Supongamos que $G$ no contiene un ciclo impar, lo que significa que $G$ es bipartito.
+
+Si $G$ es bipartito con conjuntos A y B, el número máximo de aristas es el número total de pares entre los conjuntos A y B, dado por:
+
+$|E| \leq |A|*|B|$
+
+Para maximizar |A|*|B|, tomamos la distribución más balanceada posible:
+
+$|A|*|B| \leq (\frac{n}{2})*(\frac{n}{2})=\frac{n^2}{4}$
+
+Esto significa que si $G$ es bipartito, siempre se cumple $|E| \leq \frac{n^2}{4}$
+
+Por hipótesis tenemos $|E| > \frac{n^2}{4}$. Pero acabamos de demostrar que si G es bipartito, se debe cumplir $|E| \leq \frac{n^2}{4}$\textbf{!}
+
+Por lo tanto nuestra suposición de que G es bipartita es falsa y debe contener un ciclo impar.
+
+\QED

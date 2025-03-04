@@ -1,0 +1,27 @@
+
+\textbf{Ejercicio 1.} Sea D una diagráfica de orden n. Demuestre que si D 
+no tiene ciclos dirigidos, entonces existe un orden total, $v_1,\dots,v_n$ 
+de $V_D$, tal que siempre que $(v_i,v_j)$ sea una flecha de D, se tiene que $i<j$.
+
+Abordaremos este caso por inducción.
+
+\textbf{Demostración:}
+
+\textbf{Base de inducción (n=1)}
+
+Si n = 1, la única digráfica posible es un vértice sin aristas. En este caso, el orden total es simplemente $v_1$, y la condición se cumple.
+
+\textbf{Hipótesis inductiva}
+
+Suponemos que la afirmación es cierta para cualquier digráfica de orden K. Esto quiere decir que para toda digráfica de K vértices, existe un orden total de los vértices en el que las flechas apuntan hacía adelante en secuencia.
+
+\textbf{Paso inductivo}
+
+Ahora consideramos una digráfica sin ciclos D de orden k+1. Dado que D no tiene ciclos dirigidos, necesariamente existe al menos un vértice $v_1$ sin predecesores (es decir, un vértice con grado de entrada 0), llamado vértice fuente. De lo contrario, se generaría un ciclo en algún punto de D.
+
+Procedemos a eliminar este vértice $v_1$ y todas sus aristas incidentes, obteniendo una digráfica D'=D-\{$v_1$\}. D' tiene orden K y se mantiene sin tener ciclos. Utilizando la hipótesis de inducción, existe un ordenamiento $v_2,\dots,v_k$ de los vértices de D' que cumple la propiedad.
+
+El orden total $v_1,\dots,v_k$ de los vértices de D cumple la condición:
+Si $(v_i,v_j)$ es una flecha de D, entonces $i<j$. Si $i$ = 1 entonces $v_i$ es un vértice fuente. Si $i$ > 1, entonces la flecha $(v_i,v_j)$ está en D' y se sigue cumpliendo por la hipótesis de inducción.
+
+\QED

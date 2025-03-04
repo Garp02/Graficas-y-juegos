@@ -1,0 +1,54 @@
+\textbf{Ejercicio 3}
+\begin{enumerate}[label = (\alph*)]
+	\item Demuestre que si $|E| > \binom{|V|-1}{2}$, entonces $G$ es conexa.
+
+	\item Para cada $n > 3$ encuentre una gráfica inconexa de orden
+		  $n$ con $|E| = \binom{n-1}{2}$.
+\end{enumerate}
+
+\textbf{Solución (b):}
+
+Tomemos de referencia la cantidad de aristas de una gráfica completa.
+
+\begin{align*}
+	\binom{n}{2} &= \frac{n(n-1)}{2}
+\end{align*}
+
+Y cláramente $\binom{n}{2} > \binom{n-1}{2}$.
+
+Por lo tanto, podemos construir gráficas inconexas de orden $n$ con	
+$|E| = \binom{n-1}{2}$ eliminando $n-1$ aristas de un vértice de una 
+gráfica completa $K_n$.
+
+\begin{align*}
+	\frac{n(n-1)}{2} - (n-1) &= \frac{n(n-1)}{2} - \frac{2(n-1)}{2} \\
+	\\
+	&= \frac{n(n-1)-2(n-1)}{2} \\
+	\\
+	&= \frac{(n-1)(n-2)}{2} \\
+	\\
+	&= \frac{(n-1)(n-2)(n-3)!}{2(n-3)!} \\
+	\\
+	&= \frac{(n-1)!}{2((n-1)-2)!} \\
+	\\
+	&= \binom{n-1}{2} \\ 
+\end{align*}
+
+Esto asegura que la gráfica sea inconexa, pues existe un vértice de grado 
+cero, es decir, un vértice aislado.
+ 
+
+
+\textbf{Demostración (a):}
+
+Por la construcción de \textbf{(b)} se tiene que si una gráfica de n vértices 
+tiene $\binom{n-1}{2}$ aristas, entonces es inconexa. 
+
+Por lo que, si agregamos por lo menos una arista a la gráfica, entonces 
+la gráfica será conexa. Y en caso de que la gráfica no tenga un vértice 
+aislado, entonces, la gráfica será conexa, así que se sigue cumpliendo.
+
+Por lo tanto si $|E| > \binom{|V|-1}{2}$, entonces $G$ es conexa.
+
+\QED
+

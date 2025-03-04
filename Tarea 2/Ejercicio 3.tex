@@ -1,0 +1,17 @@
+\textbf{Ejercicio 3.} Sea G una gráfica conexa. Demuestre que si G no es completa, 
+entonces contiene a $P_3$ como subgráfica inducida.
+
+\textbf{Demostración:}
+
+Sea $G$ una gráfica conexa que no es completa, entonces existe un par de vértices
+$u,v$ tal que no existe una arista entre ellos.Como la gráfica $G$ es conexa, entonces 
+existe un camino entre $u$ y $v$ tal que su longitud es mayor o igual a dos, pues los 
+vértices $u$ y $v$ no son adyacentes. Entonces, el camino de longitud mínima dos consta 
+de por lo menos tres vértices, es decir, $u,v$ y un vértice $w$ intermedio. Considernado 
+el camino de longitud mínima $W = (u,w,v)$, se tiene que el conjunto de los vértices del 
+camino $W$, que es un subconjunto de los vértices de $G$ (es decir $V_W \subset V_G)$, 
+inducen una subgráfica de $G$,  pues las aristas de $W$ son las mismas aristas de $G$ 
+que conectan a los vértices de $W$. Por lo tanto, la gráfica $G$ contiene a la trayectoria 
+$P_3$ como subgráfica inducida.
+
+\QED

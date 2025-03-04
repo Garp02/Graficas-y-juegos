@@ -1,0 +1,26 @@
+\textbf{Ejercicio 2.} Demuestre que si G tiene diámetro mayor a 3, entonces 
+$\overline{G}$ tiene diámetro menor que 3.
+
+\textbf{Demostración:}
+
+Sea $G$ una gráfica con diámetro mayor a 3, entonces existe un par de vértices 
+$u,v$ tal que la distancia entre ellos es mayor a 3. Esto implica que no existe 
+un camino de longitud 2 entre $u$ y $v$ en $G$. 
+
+Por definición, $\overline{G}$ tiene los mismos vértices que $G$, y dos vértices 
+son adyacentes en $\overline{G}$ si y solo si no son adyacentes en $G$. 
+
+Supongamos que $\overline{G}$ tiene diámetro 3 o mayor. Entonces existen dos
+vértices $x,y$ en $\overline{G}$ tal que la distancia entre $x$ y $y$ es 3. 
+Esto implica que $x$ y $y$ no son adyacentes en $G$. 
+
+Si $x$ y $y$ no son adyacentes en $G$, entonces existe un vértice $w$ tal que 
+$x$ y $w$ son adyacentes en $G$ y $w$ y $y$ son adyacentes en $G$. 
+
+Por lo tanto, $w$ es adyacente a $x$ y $y$ en $\overline{G}$, lo cual implica 
+que la distancia entre $x$ y $y$ en $\overline{G}$ es 1, lo cual es una 
+contradicción. 
+
+Por lo tanto, $\overline{G}$ tiene diámetro menor que 3.
+
+\QED

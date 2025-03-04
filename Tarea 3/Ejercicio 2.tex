@@ -1,0 +1,46 @@
+\textbf{Ejercicio 2.} Una gráfica es \textit{escindible completa} si su conjunto de
+vértices admite una partición $(S,K)$ de tal forma que $S$ es un conjunto 
+independiente, $K$ es un clan, y cada vértice en $S$ es adyacente a cada vértice 
+en $K$.
+
+Demuestre que una gráfica es escindible completa si y solo si no contiene a 
+$C_4$ ni a $\overline{P_3}$ como subgráfica inducida.
+
+\textbf{Demostración:}
+
+$\Rightarrow)$ $G$ admite una partición $(S,K)$ de tal forma que $S$ es un 
+conjunto independiente, $K$ es un clan, y cada vértice en $S$ es adyacente a 
+cada vértice en $K$. 
+
+Supongamos que $G$ contiene a $C_4$ como subgráfica inducida. Entonces $G$ tiene 
+vértices $v_1, v_2, v_3, v_4$ tal que $v_1$ es adyacente a $v_2$, $v_2$ es adyacente 
+a $v_3$, $v_3$ es adyacente a $v_4$, y $v_4$ es adyacente a $v_1$. Pero, si esos 
+vértices pertenecen a $S$, entonces $S$ no es independiente. 
+
+Si $C_4$ es subgráfica inducida de $K$, entonces $K$ no es un clan, pues 
+los vércites no son adyacentes entre sí, lo cual es una contradicción. 
+
+Si $C_4$ tiene como vértices a algunos vértices de $S$ y de $K$, entonces, 
+o $S$ tiene dos vértices adyacentes y $K$ tiene dos vértices no adyacentes, o $S$ 
+tiene dos vértices no adyacentes y $K$ tiene dos vértices adyacentes, lo cual es una 
+contradicción.
+
+Por lo tanto $G$ no contiene a $C_4$ como subgráfica inducida.
+
+Por otro lado, supongamos que $G$ contiene a $\overline{P_3}$ como subgráfica inducida.
+
+Supongamos que $S$ tiene a $\overline{P_3}$ como subgráfica inducida, entonces $S$ tiene 
+dos vértices adyacentes, entonces $S$ no es independiente, lo cual es una contradicción.
+
+Ahora bien, si $\overline{P_3}$ es subgráfica inducida de $K$, entonces $K$ no es un clan, 
+pues los vértices no son adyacentes entre sí, lo cual es una contradicción. 
+
+Finalmente, si $\overline{P_3}$ tiene como vértices a algunos vértices de $S$ y de $K$, 
+entonces, o $S$ tiene dos vértices adyacentes y $K$ tiene dos vértices no adyacentes, o $S$ 
+tiene dos vértices no adyacentes y $K$ tiene dos vértices adyacentes, lo cual es una 
+contradicción.
+
+Por lo tanto $G$ no contiene a $\overline{P_3}$ ni a $C_4$ como subgráfica inducida$\dots(I)$
+
+
+\newpage
